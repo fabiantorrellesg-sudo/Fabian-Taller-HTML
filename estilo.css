@@ -1,0 +1,135 @@
+/* Reset y configuración global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables de color */
+:root {
+    --primary: #2c3e50;
+    --secundary: #3498db;
+    --accent: #e74c3c;
+    --succes: #2ecc71;
+    --light: #ecf0f1;
+    --dark: #1a252f;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(secondary), #2c3e50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* contenedor principal */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjeta de login */
+.login-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* header de la tarjeta */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1{
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 16px;  
+}
+
+/* Campos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--secundary);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--secundary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Validación visual (SIN JS) */
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--accent);
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: var(--succes);
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Botón */
+btn.primary {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secundary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
