@@ -78,7 +78,7 @@ header p {
     font-size: 15px;  
 }
 
-/* Campos del formulario (se agregaron text, tel, number y select) */
+/* Campos del formulario */
 .form-group {
     margin-bottom: 18px;
     margin-top: 10px;
