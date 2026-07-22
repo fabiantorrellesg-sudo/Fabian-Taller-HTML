@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>  
+    <link rel="stylesheet" href="estilo2.css">  
+</head>
+<body>
+    
+    <main class="registro-container">  
+        <section class="registro">
+        <header>
+        <h1>Registro del Cliente</h1>
+        </header>
+            <form action="#" class="formulariosCRM">
+                <fieldset class="grid-fieldset">
+                <!-- Imputs del formulario -->
+                <div class="form-group"> 
+                    <label for="nombre"> Nombre completo:</label>
+                    <input type="text" name="nombre" id="nombre" required placeholder="Fabian Torrelles" pattern="[A-Za-záéíóúñÑ ]+">
+                </div>
+
+                 <div class="form-group">
+                    <label type="email" id="email">Email:</label> 
+                    <input type="email" name="email" id="email" required placeholder="ejemplo@gmail.com">
+                 </div>    
+  
+                 <div class="form-group">
+                    <label for="cedula"> Cedula:</label>
+                    <input type="number" name="cedula" id="cedula" required placeholder="12345678" minlength="7" maxlength="8">
+                 </div>
+                 
+                 <div class="form-group">
+                    <label for="telefono"> Telefono:</label>
+                    <input type="tel" name="telefono" id="telefono" required placeholder="04261234567" minlength="10" maxlength="11">
+                 </div>
+                 
+                 <div class="form-group">
+                    <label for="direccion"> Dirección:</label>
+                    <input type="text" name="direccion" id="direccion" required placeholder="Ingresa la dirección">
+                 </div>
+
+                <fieldset>
+                    <legend>
+                        Tipo de cliente:
+                    </legend>
+                    
+                    <input type="radio" name="cliente" id="natural" value="NT" checked required>
+                    <label for="natural">Natural</label>
+
+                    <input type="radio" name="cliente" id="juridico" value="JD">
+                    <label for="juridico">Juridico</label>
+                </fieldset>
+
+                <div class="form-group">
+                 <select id="industria" name="industria">
+                        <option value="">
+                        Industria
+                        </option>
+                    
+                        <option value="Tc">
+                        Tecnologia
+                        </option>
+
+                        <option value="Cm">
+                        Comercio
+                        </option>
+
+                        <option value="Sd">
+                        Salud
+                        </option>
+
+                        <option value="Ed">
+                        Educación
+                        </option>
+                    </select>
+                </div>
+
+                <label>
+                    <input type="checkbox" name="Termino" id="Termino">
+                    Acepto los términos y condiciones
+                </label>
+                    </fieldset>
+                <button type="submit" class="btn"> Registrar</button>
+
+                <a href="login.html">Ya estas registrado? Inicia Sesion</a> 
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+</body>
+</html>

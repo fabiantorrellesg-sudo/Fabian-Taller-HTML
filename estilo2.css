@@ -1,0 +1,208 @@
+/* Reset y configuración global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --succes: #2ecc71;
+    --light: #ecf0f1;
+    --dark: #1a252f;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.registro-container, #registro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjeta de registro/login */
+.registro, .formulariosCRM {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+    border: none;
+}
+
+.grid-fieldset {
+    grid-column: span 2;
+}
+
+.registro:hover, .formulariosCRM:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Header de la tarjeta */
+header {
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+header h1 {
+    font-size: 34px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 15px;  
+}
+
+/* Campos del formulario (se agregaron text, tel, number y select) */
+.form-group {
+    margin-bottom: 18px;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--dark);
+    background-color: #fdfdfd;
+    transition: all 0.25s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+    background-color: var(--white);
+}
+
+/* Agrupaciones para Fieldset y Radio Buttons */
+fieldset {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+}
+
+legend {
+    padding: 0 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--primary);
+}
+
+fieldset label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: var(--secondary); /* Cambia el color nativo del check/radio */
+    cursor: pointer;
+}
+
+/* Validación visual */
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--accent);
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: var(--success);
+}
+
+/* Botón principal */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    font-size: 19px;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Enlaces del Footer */
+a {
+    display: block;
+    text-align: center;
+    color: var(--secondary);
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-card, .formulariosCRM {
+        padding: 22px;
+    }
+    header h1 {
+        font-size: 22px;
+    }
+}
