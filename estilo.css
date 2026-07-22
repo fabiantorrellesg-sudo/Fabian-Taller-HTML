@@ -121,7 +121,7 @@ input:valid:not(:placeholder-shown) {
 }
 
 /* Botón */
-.btn.primary {
+.btn {
      width: 100%;
     padding: 12px;
     background-color: var(--secondary);
@@ -135,14 +135,14 @@ input:valid:not(:placeholder-shown) {
     transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
-.btn-primary:hover {
+.btn:hover {
      background-color: #2980b9;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
     font-size: 19px;
 }
 
-.btn-primary:active {
+.btn:active {
     transform: scale(0.98);
 }
 
